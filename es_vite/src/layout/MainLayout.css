@@ -1,0 +1,9 @@
+.site-header {
+    position: fixed;
+    padding-right: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 200px);
+    z-index: 10;
+}

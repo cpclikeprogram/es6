@@ -1,0 +1,21 @@
+{
+    "name": "es6",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "doc": "typedoc --options ./typedoc.json"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "typedoc": "^0.23.26",
+        "typedoc-plugin-markdown": "^3.14.0"
+    },
+    "dependencies": {
+        "i18next": "^22.4.15",
+        "react-i18next": "^12.2.2"
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function GUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0,
+                    v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        fetch("./chapter.json").then(data => data.json()).then(data => {
+            if (data) {
+                let res = data.map(v => {
+                    // let name = v.id.includes("/") ? v.id.split("/")[1] : v.title;
+                    return {
+                        ...v,
+                        "GUID": GUID(),
+                    }
+                })
+                console.info(res, "0000")
+            }
+        })
+    </script>
+</body>
+
+</html>
